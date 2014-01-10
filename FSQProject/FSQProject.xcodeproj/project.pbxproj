@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F729498C187FC97D00E2BFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F729498B187FC97D00E2BFF8 /* Foundation.framework */; };
+		F729498E187FC97D00E2BFF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F729498D187FC97D00E2BFF8 /* CoreGraphics.framework */; };
+		F7294990187FC97D00E2BFF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F729498F187FC97D00E2BFF8 /* UIKit.framework */; };
+		F7294996187FC97D00E2BFF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7294994187FC97D00E2BFF8 /* InfoPlist.strings */; };
+		F7294998187FC97D00E2BFF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7294997187FC97D00E2BFF8 /* main.m */; };
+		F729499C187FC97D00E2BFF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F729499B187FC97D00E2BFF8 /* AppDelegate.m */; };
+		F729499F187FC97D00E2BFF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F729499D187FC97D00E2BFF8 /* Main.storyboard */; };
+		F72949A2187FC97D00E2BFF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949A1187FC97D00E2BFF8 /* ViewController.m */; };
+		F72949A4187FC97D00E2BFF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72949A3187FC97D00E2BFF8 /* Images.xcassets */; };
+		F72949AB187FC97D00E2BFF8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72949AA187FC97D00E2BFF8 /* XCTest.framework */; };
+		F72949AC187FC97D00E2BFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F729498B187FC97D00E2BFF8 /* Foundation.framework */; };
+		F72949AD187FC97D00E2BFF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F729498F187FC97D00E2BFF8 /* UIKit.framework */; };
+		F72949B5187FC97D00E2BFF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F72949B3187FC97D00E2BFF8 /* InfoPlist.strings */; };
+		F72949B7187FC97D00E2BFF8 /* FSQProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949B6187FC97D00E2BFF8 /* FSQProjectTests.m */; };
+		F72949D3187FC9E900E2BFF8 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = F72949C1187FC9E900E2BFF8 /* CHANGELOG.md */; };
+		F72949D4187FC9E900E2BFF8 /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949C3187FC9E900E2BFF8 /* Foursquare2.m */; };
+		F72949D5187FC9E900E2BFF8 /* FSOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949C5187FC9E900E2BFF8 /* FSOAuth.m */; };
+		F72949D6187FC9E900E2BFF8 /* FSRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949C7187FC9E900E2BFF8 /* FSRequester.m */; };
+		F72949D7187FC9E900E2BFF8 /* FSTargetCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949C9187FC9E900E2BFF8 /* FSTargetCallback.m */; };
+		F72949D8187FC9E900E2BFF8 /* FSWebLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949CB187FC9E900E2BFF8 /* FSWebLogin.m */; };
+		F72949D9187FC9E900E2BFF8 /* FSWebLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72949CC187FC9E900E2BFF8 /* FSWebLogin.xib */; };
+		F72949DA187FC9E900E2BFF8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = F72949CD187FC9E900E2BFF8 /* pin.png */; };
+		F72949DB187FC9E900E2BFF8 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F72949CE187FC9E900E2BFF8 /* pin@2x.png */; };
+		F72949DC187FC9E900E2BFF8 /* poweredByFoursquare_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = F72949CF187FC9E900E2BFF8 /* poweredByFoursquare_gray.png */; };
+		F72949DD187FC9E900E2BFF8 /* poweredByFoursquare_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F72949D0187FC9E900E2BFF8 /* poweredByFoursquare_gray@2x.png */; };
+		F72949E0187FCBB300E2BFF8 /* NearbyVenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949DF187FCBB300E2BFF8 /* NearbyVenuesViewController.m */; };
+		F72949E5187FCBDF00E2BFF8 /* FSConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949E2187FCBDF00E2BFF8 /* FSConverter.m */; };
+		F72949E6187FCBDF00E2BFF8 /* FSVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949E4187FCBDF00E2BFF8 /* FSVenue.m */; };
+		F72949E8187FCC2200E2BFF8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72949E7187FCC2200E2BFF8 /* StoreKit.framework */; };
+		F72949EA187FCC2700E2BFF8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72949E9187FCC2600E2BFF8 /* MapKit.framework */; };
+		F72949EC187FCC2D00E2BFF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72949EB187FCC2D00E2BFF8 /* CoreLocation.framework */; };
+		F72949F8187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949F5187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m */; };
+		F72949F9187FEFD800E2BFF8 /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949F7187FEFD800E2BFF8 /* AutoCoding.m */; };
+		F72949FC187FF00200E2BFF8 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949FB187FF00200E2BFF8 /* Data.m */; };
+		F72949FF187FF0B700E2BFF8 /* FSService.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949FE187FF0B700E2BFF8 /* FSService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F72949AE187FC97D00E2BFF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7294980187FC97D00E2BFF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7294987187FC97D00E2BFF8;
+			remoteInfo = FSQProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7294988187FC97D00E2BFF8 /* FSQProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSQProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F729498B187FC97D00E2BFF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F729498D187FC97D00E2BFF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F729498F187FC97D00E2BFF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7294993187FC97D00E2BFF8 /* FSQProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FSQProject-Info.plist"; sourceTree = "<group>"; };
+		F7294995187FC97D00E2BFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7294997187FC97D00E2BFF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7294999187FC97D00E2BFF8 /* FSQProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSQProject-Prefix.pch"; sourceTree = "<group>"; };
+		F729499A187FC97D00E2BFF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F729499B187FC97D00E2BFF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F729499E187FC97D00E2BFF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F72949A0187FC97D00E2BFF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F72949A1187FC97D00E2BFF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F72949A3187FC97D00E2BFF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F72949A9187FC97D00E2BFF8 /* FSQProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSQProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72949AA187FC97D00E2BFF8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F72949B2187FC97D00E2BFF8 /* FSQProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FSQProjectTests-Info.plist"; sourceTree = "<group>"; };
+		F72949B4187FC97D00E2BFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F72949B6187FC97D00E2BFF8 /* FSQProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSQProjectTests.m; sourceTree = "<group>"; };
+		F72949C1187FC9E900E2BFF8 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		F72949C2187FC9E900E2BFF8 /* Foursquare2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare2.h; sourceTree = "<group>"; };
+		F72949C3187FC9E900E2BFF8 /* Foursquare2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare2.m; sourceTree = "<group>"; };
+		F72949C4187FC9E900E2BFF8 /* FSOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOAuth.h; sourceTree = "<group>"; };
+		F72949C5187FC9E900E2BFF8 /* FSOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOAuth.m; sourceTree = "<group>"; };
+		F72949C6187FC9E900E2BFF8 /* FSRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRequester.h; sourceTree = "<group>"; };
+		F72949C7187FC9E900E2BFF8 /* FSRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRequester.m; sourceTree = "<group>"; };
+		F72949C8187FC9E900E2BFF8 /* FSTargetCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTargetCallback.h; sourceTree = "<group>"; };
+		F72949C9187FC9E900E2BFF8 /* FSTargetCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTargetCallback.m; sourceTree = "<group>"; };
+		F72949CA187FC9E900E2BFF8 /* FSWebLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebLogin.h; sourceTree = "<group>"; };
+		F72949CB187FC9E900E2BFF8 /* FSWebLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebLogin.m; sourceTree = "<group>"; };
+		F72949CC187FC9E900E2BFF8 /* FSWebLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSWebLogin.xib; sourceTree = "<group>"; };
+		F72949CD187FC9E900E2BFF8 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		F72949CE187FC9E900E2BFF8 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
+		F72949CF187FC9E900E2BFF8 /* poweredByFoursquare_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredByFoursquare_gray.png; sourceTree = "<group>"; };
+		F72949D0187FC9E900E2BFF8 /* poweredByFoursquare_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredByFoursquare_gray@2x.png"; sourceTree = "<group>"; };
+		F72949DE187FCBB300E2BFF8 /* NearbyVenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVenuesViewController.h; sourceTree = "<group>"; };
+		F72949DF187FCBB300E2BFF8 /* NearbyVenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVenuesViewController.m; sourceTree = "<group>"; };
+		F72949E1187FCBDF00E2BFF8 /* FSConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSConverter.h; sourceTree = "<group>"; };
+		F72949E2187FCBDF00E2BFF8 /* FSConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSConverter.m; sourceTree = "<group>"; };
+		F72949E3187FCBDF00E2BFF8 /* FSVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVenue.h; sourceTree = "<group>"; };
+		F72949E4187FCBDF00E2BFF8 /* FSVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVenue.m; sourceTree = "<group>"; };
+		F72949E7187FCC2200E2BFF8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F72949E9187FCC2600E2BFF8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F72949EB187FCC2D00E2BFF8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F72949F4187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AutoCoding+RecursiveParsing.h"; sourceTree = "<group>"; };
+		F72949F5187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AutoCoding+RecursiveParsing.m"; sourceTree = "<group>"; };
+		F72949F6187FEFD800E2BFF8 /* AutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCoding.h; sourceTree = "<group>"; };
+		F72949F7187FEFD800E2BFF8 /* AutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCoding.m; sourceTree = "<group>"; };
+		F72949FA187FF00200E2BFF8 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		F72949FB187FF00200E2BFF8 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		F72949FD187FF0B700E2BFF8 /* FSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSService.h; sourceTree = "<group>"; };
+		F72949FE187FF0B700E2BFF8 /* FSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7294985187FC97D00E2BFF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72949EC187FCC2D00E2BFF8 /* CoreLocation.framework in Frameworks */,
+				F72949EA187FCC2700E2BFF8 /* MapKit.framework in Frameworks */,
+				F72949E8187FCC2200E2BFF8 /* StoreKit.framework in Frameworks */,
+				F729498E187FC97D00E2BFF8 /* CoreGraphics.framework in Frameworks */,
+				F7294990187FC97D00E2BFF8 /* UIKit.framework in Frameworks */,
+				F729498C187FC97D00E2BFF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72949A6187FC97D00E2BFF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72949AB187FC97D00E2BFF8 /* XCTest.framework in Frameworks */,
+				F72949AD187FC97D00E2BFF8 /* UIKit.framework in Frameworks */,
+				F72949AC187FC97D00E2BFF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F729497F187FC97D00E2BFF8 = {
+			isa = PBXGroup;
+			children = (
+				F7294991187FC97D00E2BFF8 /* FSQProject */,
+				F72949B0187FC97D00E2BFF8 /* FSQProjectTests */,
+				F729498A187FC97D00E2BFF8 /* Frameworks */,
+				F7294989187FC97D00E2BFF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7294989187FC97D00E2BFF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7294988187FC97D00E2BFF8 /* FSQProject.app */,
+				F72949A9187FC97D00E2BFF8 /* FSQProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F729498A187FC97D00E2BFF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F72949EB187FCC2D00E2BFF8 /* CoreLocation.framework */,
+				F72949E9187FCC2600E2BFF8 /* MapKit.framework */,
+				F72949E7187FCC2200E2BFF8 /* StoreKit.framework */,
+				F729498B187FC97D00E2BFF8 /* Foundation.framework */,
+				F729498D187FC97D00E2BFF8 /* CoreGraphics.framework */,
+				F729498F187FC97D00E2BFF8 /* UIKit.framework */,
+				F72949AA187FC97D00E2BFF8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7294991187FC97D00E2BFF8 /* FSQProject */ = {
+			isa = PBXGroup;
+			children = (
+				F72949C0187FC9E900E2BFF8 /* Foursquare2 */,
+				F729499A187FC97D00E2BFF8 /* AppDelegate.h */,
+				F729499B187FC97D00E2BFF8 /* AppDelegate.m */,
+				F72949FA187FF00200E2BFF8 /* Data.h */,
+				F72949FB187FF00200E2BFF8 /* Data.m */,
+				F72949F3187FEFD800E2BFF8 /* Tools */,
+				F729499D187FC97D00E2BFF8 /* Main.storyboard */,
+				F72949DE187FCBB300E2BFF8 /* NearbyVenuesViewController.h */,
+				F72949DF187FCBB300E2BFF8 /* NearbyVenuesViewController.m */,
+				F72949A0187FC97D00E2BFF8 /* ViewController.h */,
+				F72949A1187FC97D00E2BFF8 /* ViewController.m */,
+				F72949A3187FC97D00E2BFF8 /* Images.xcassets */,
+				F7294992187FC97D00E2BFF8 /* Supporting Files */,
+				F72949FD187FF0B700E2BFF8 /* FSService.h */,
+				F72949FE187FF0B700E2BFF8 /* FSService.m */,
+			);
+			path = FSQProject;
+			sourceTree = "<group>";
+		};
+		F7294992187FC97D00E2BFF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7294993187FC97D00E2BFF8 /* FSQProject-Info.plist */,
+				F7294994187FC97D00E2BFF8 /* InfoPlist.strings */,
+				F7294997187FC97D00E2BFF8 /* main.m */,
+				F7294999187FC97D00E2BFF8 /* FSQProject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F72949B0187FC97D00E2BFF8 /* FSQProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				F72949B6187FC97D00E2BFF8 /* FSQProjectTests.m */,
+				F72949B1187FC97D00E2BFF8 /* Supporting Files */,
+			);
+			path = FSQProjectTests;
+			sourceTree = "<group>";
+		};
+		F72949B1187FC97D00E2BFF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F72949B2187FC97D00E2BFF8 /* FSQProjectTests-Info.plist */,
+				F72949B3187FC97D00E2BFF8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F72949C0187FC9E900E2BFF8 /* Foursquare2 */ = {
+			isa = PBXGroup;
+			children = (
+				F72949E1187FCBDF00E2BFF8 /* FSConverter.h */,
+				F72949E2187FCBDF00E2BFF8 /* FSConverter.m */,
+				F72949E3187FCBDF00E2BFF8 /* FSVenue.h */,
+				F72949E4187FCBDF00E2BFF8 /* FSVenue.m */,
+				F72949C1187FC9E900E2BFF8 /* CHANGELOG.md */,
+				F72949C2187FC9E900E2BFF8 /* Foursquare2.h */,
+				F72949C3187FC9E900E2BFF8 /* Foursquare2.m */,
+				F72949C4187FC9E900E2BFF8 /* FSOAuth.h */,
+				F72949C5187FC9E900E2BFF8 /* FSOAuth.m */,
+				F72949C6187FC9E900E2BFF8 /* FSRequester.h */,
+				F72949C7187FC9E900E2BFF8 /* FSRequester.m */,
+				F72949C8187FC9E900E2BFF8 /* FSTargetCallback.h */,
+				F72949C9187FC9E900E2BFF8 /* FSTargetCallback.m */,
+				F72949CA187FC9E900E2BFF8 /* FSWebLogin.h */,
+				F72949CB187FC9E900E2BFF8 /* FSWebLogin.m */,
+				F72949CC187FC9E900E2BFF8 /* FSWebLogin.xib */,
+				F72949CD187FC9E900E2BFF8 /* pin.png */,
+				F72949CE187FC9E900E2BFF8 /* pin@2x.png */,
+				F72949CF187FC9E900E2BFF8 /* poweredByFoursquare_gray.png */,
+				F72949D0187FC9E900E2BFF8 /* poweredByFoursquare_gray@2x.png */,
+				F72949D1187FC9E900E2BFF8 /* submodule */,
+			);
+			path = Foursquare2;
+			sourceTree = "<group>";
+		};
+		F72949D1187FC9E900E2BFF8 /* submodule */ = {
+			isa = PBXGroup;
+			children = (
+				F72949D2187FC9E900E2BFF8 /* foursquare-ios-oauth */,
+			);
+			path = submodule;
+			sourceTree = "<group>";
+		};
+		F72949D2187FC9E900E2BFF8 /* foursquare-ios-oauth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "foursquare-ios-oauth";
+			sourceTree = "<group>";
+		};
+		F72949F3187FEFD800E2BFF8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F72949F4187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.h */,
+				F72949F5187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m */,
+				F72949F6187FEFD800E2BFF8 /* AutoCoding.h */,
+				F72949F7187FEFD800E2BFF8 /* AutoCoding.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7294987187FC97D00E2BFF8 /* FSQProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F72949BA187FC97D00E2BFF8 /* Build configuration list for PBXNativeTarget "FSQProject" */;
+			buildPhases = (
+				F7294984187FC97D00E2BFF8 /* Sources */,
+				F7294985187FC97D00E2BFF8 /* Frameworks */,
+				F7294986187FC97D00E2BFF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSQProject;
+			productName = FSQProject;
+			productReference = F7294988187FC97D00E2BFF8 /* FSQProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F72949A8187FC97D00E2BFF8 /* FSQProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F72949BD187FC97D00E2BFF8 /* Build configuration list for PBXNativeTarget "FSQProjectTests" */;
+			buildPhases = (
+				F72949A5187FC97D00E2BFF8 /* Sources */,
+				F72949A6187FC97D00E2BFF8 /* Frameworks */,
+				F72949A7187FC97D00E2BFF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F72949AF187FC97D00E2BFF8 /* PBXTargetDependency */,
+			);
+			name = FSQProjectTests;
+			productName = FSQProjectTests;
+			productReference = F72949A9187FC97D00E2BFF8 /* FSQProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7294980187FC97D00E2BFF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "David Tseng";
+				TargetAttributes = {
+					F72949A8187FC97D00E2BFF8 = {
+						TestTargetID = F7294987187FC97D00E2BFF8;
+					};
+				};
+			};
+			buildConfigurationList = F7294983187FC97D00E2BFF8 /* Build configuration list for PBXProject "FSQProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F729497F187FC97D00E2BFF8;
+			productRefGroup = F7294989187FC97D00E2BFF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7294987187FC97D00E2BFF8 /* FSQProject */,
+				F72949A8187FC97D00E2BFF8 /* FSQProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7294986187FC97D00E2BFF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72949DB187FC9E900E2BFF8 /* pin@2x.png in Resources */,
+				F72949D9187FC9E900E2BFF8 /* FSWebLogin.xib in Resources */,
+				F72949A4187FC97D00E2BFF8 /* Images.xcassets in Resources */,
+				F72949DD187FC9E900E2BFF8 /* poweredByFoursquare_gray@2x.png in Resources */,
+				F7294996187FC97D00E2BFF8 /* InfoPlist.strings in Resources */,
+				F72949DA187FC9E900E2BFF8 /* pin.png in Resources */,
+				F729499F187FC97D00E2BFF8 /* Main.storyboard in Resources */,
+				F72949D3187FC9E900E2BFF8 /* CHANGELOG.md in Resources */,
+				F72949DC187FC9E900E2BFF8 /* poweredByFoursquare_gray.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72949A7187FC97D00E2BFF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72949B5187FC97D00E2BFF8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7294984187FC97D00E2BFF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72949A2187FC97D00E2BFF8 /* ViewController.m in Sources */,
+				F72949FF187FF0B700E2BFF8 /* FSService.m in Sources */,
+				F72949E6187FCBDF00E2BFF8 /* FSVenue.m in Sources */,
+				F729499C187FC97D00E2BFF8 /* AppDelegate.m in Sources */,
+				F72949D5187FC9E900E2BFF8 /* FSOAuth.m in Sources */,
+				F72949F9187FEFD800E2BFF8 /* AutoCoding.m in Sources */,
+				F72949E0187FCBB300E2BFF8 /* NearbyVenuesViewController.m in Sources */,
+				F7294998187FC97D00E2BFF8 /* main.m in Sources */,
+				F72949D7187FC9E900E2BFF8 /* FSTargetCallback.m in Sources */,
+				F72949D4187FC9E900E2BFF8 /* Foursquare2.m in Sources */,
+				F72949F8187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m in Sources */,
+				F72949E5187FCBDF00E2BFF8 /* FSConverter.m in Sources */,
+				F72949FC187FF00200E2BFF8 /* Data.m in Sources */,
+				F72949D6187FC9E900E2BFF8 /* FSRequester.m in Sources */,
+				F72949D8187FC9E900E2BFF8 /* FSWebLogin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72949A5187FC97D00E2BFF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72949B7187FC97D00E2BFF8 /* FSQProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F72949AF187FC97D00E2BFF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7294987187FC97D00E2BFF8 /* FSQProject */;
+			targetProxy = F72949AE187FC97D00E2BFF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7294994187FC97D00E2BFF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7294995187FC97D00E2BFF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F729499D187FC97D00E2BFF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F729499E187FC97D00E2BFF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F72949B3187FC97D00E2BFF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F72949B4187FC97D00E2BFF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F72949B8187FC97D00E2BFF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F72949B9187FC97D00E2BFF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F72949BB187FC97D00E2BFF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSQProject/FSQProject-Prefix.pch";
+				INFOPLIST_FILE = "FSQProject/FSQProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F72949BC187FC97D00E2BFF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSQProject/FSQProject-Prefix.pch";
+				INFOPLIST_FILE = "FSQProject/FSQProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F72949BE187FC97D00E2BFF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FSQProject.app/FSQProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSQProject/FSQProject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FSQProjectTests/FSQProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F72949BF187FC97D00E2BFF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FSQProject.app/FSQProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSQProject/FSQProject-Prefix.pch";
+				INFOPLIST_FILE = "FSQProjectTests/FSQProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7294983187FC97D00E2BFF8 /* Build configuration list for PBXProject "FSQProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72949B8187FC97D00E2BFF8 /* Debug */,
+				F72949B9187FC97D00E2BFF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F72949BA187FC97D00E2BFF8 /* Build configuration list for PBXNativeTarget "FSQProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72949BB187FC97D00E2BFF8 /* Debug */,
+				F72949BC187FC97D00E2BFF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F72949BD187FC97D00E2BFF8 /* Build configuration list for PBXNativeTarget "FSQProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72949BE187FC97D00E2BFF8 /* Debug */,
+				F72949BF187FC97D00E2BFF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7294980187FC97D00E2BFF8 /* Project object */;
+}
