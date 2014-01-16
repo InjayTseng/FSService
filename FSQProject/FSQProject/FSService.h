@@ -17,6 +17,9 @@ typedef void(^ARRAYBLOCK)(NSArray*);
 
 @interface FSService : NSObject
 
-+ (void)getVenuesForLocation:(CLLocation *)location andComplete:(ARRAYBLOCK)complete;
++ (void)getVenuesWithIconForLocation:(CLLocation *)location sortEnable:(BOOL)isSort andComplete:(ARRAYBLOCK)complete;
+
++ (void)getVenuesForLocation:(CLLocation *)location sortEnable:(BOOL)isSort andComplete:(ARRAYBLOCK)complete;
++(void)downloadCategoryIconsIn:(NSArray*)array andComplete:(XBLOCK)complete;
 
 @end

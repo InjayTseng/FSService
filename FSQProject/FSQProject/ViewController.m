@@ -14,6 +14,7 @@
 #import <MapKit/MapKit.h>
 #import "AutoCoding+RecursiveParsing.h"
 #import "FSService.h"
+#import "VenueMapViewController.h"
 
 @interface ViewController ()<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -36,10 +37,10 @@
     self.locationManager.delegate = self;
     self.tbView.delegate = self;
     self.tbView.dataSource = self;
-    [self.locationManager startUpdatingLocation];
+    //[self.locationManager startUpdatingLocation];
     //[self updateRightBarButtonStatus];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self getVenuesForLocation:self.locationManager.location];
+    //[self getVenuesForLocation:self.locationManager.location];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -60,14 +61,14 @@
     }
 }
 
-- (void)getVenuesForLocation:(CLLocation *)location {
-    
-    [FSService getVenuesForLocation:location andComplete:^(NSArray *venuesArray) {
-        self.nearbyVenues = venuesArray;
-        [self showResult];
-    }];
-    
-}
+//- (void)getVenuesForLocation:(CLLocation *)location {
+//    
+//    [FSService getVenuesForLocation:location andComplete:^(NSArray *venuesArray) {
+//        self.nearbyVenues = venuesArray;
+//        [self showResult];
+//    }];
+//    
+//}
 
 -(void)showResult{
  
@@ -79,6 +80,28 @@
     
     [self.tbView reloadData];
 }
+- (IBAction)btnGetSpecificLocationClicked:(id)sender {
+    
+    CLLocation* loc = [[CLLocation alloc]initWithLatitude: 25.032609 longitude:121.558727];
+
+    VenueMapViewController *vm = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueMapViewController"];
+    [vm setTargetLocation:loc];
+    [self.navigationController pushViewController:vm animated:YES];
+
+}
+
+//-(void)getRestaurantsFrom:(CLLocation*)loc andComplete:(XBLOCK)complete{
+//
+//    [FSService getVenuesForLocation:loc andComplete:^(NSArray *venuesArray) {
+//        self.nearbyVenues = venuesArray;
+//        [[Data sharedInstance] setNearbyVenues:[NSArray arrayWithArray:self.nearbyVenues]];
+//        VenueMapViewController *vm = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueMapViewController"];
+//        [vm setTargetLocation:loc];
+//        [vm setNearbyVenuesArray:[NSArray arrayWithArray:venuesArray]];
+//        [self.navigationController pushViewController:vm animated:YES];
+//    }];
+//    
+//}
 
 #pragma mark - Table
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

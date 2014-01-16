@@ -196,10 +196,10 @@
         pin.canShowCallout = YES;
         pin.image = [UIImage imageNamed:@"pin.png"];
         pin.calloutOffset = CGPointMake(0, 0);
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        [button addTarget:self
-                   action:@selector(checkinButton) forControlEvents:UIControlEventTouchUpInside];
-        pin.rightCalloutAccessoryView = button;
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        [button addTarget:self
+//                   action:@selector(checkinButton) forControlEvents:UIControlEventTouchUpInside];
+//        pin.rightCalloutAccessoryView = button;
         
     }
     return pin;

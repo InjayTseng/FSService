@@ -42,6 +42,71 @@
 		F72949F9187FEFD800E2BFF8 /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949F7187FEFD800E2BFF8 /* AutoCoding.m */; };
 		F72949FC187FF00200E2BFF8 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949FB187FF00200E2BFF8 /* Data.m */; };
 		F72949FF187FF0B700E2BFF8 /* FSService.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949FE187FF0B700E2BFF8 /* FSService.m */; };
+		F76972171887873A00E2C2B4 /* VenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76972161887873A00E2C2B4 /* VenueMapViewController.m */; };
+		F769721B1887AC6800E2C2B4 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F76972181887AC6800E2C2B4 /* SVProgressHUD.bundle */; };
+		F769721C1887AC6800E2C2B4 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F769721A1887AC6800E2C2B4 /* SVProgressHUD.m */; };
+		F76972D71887B73800E2C2B4 /* AmericanRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972991887B73700E2C2B4 /* AmericanRestaurant */; };
+		F76972D81887B73800E2C2B4 /* AsianRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F769729A1887B73700E2C2B4 /* AsianRestaurant */; };
+		F76972D91887B73800E2C2B4 /* AustralianRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F769729B1887B73700E2C2B4 /* AustralianRestaurant */; };
+		F76972DA1887B73800E2C2B4 /* Bank in Resources */ = {isa = PBXBuildFile; fileRef = F769729C1887B73700E2C2B4 /* Bank */; };
+		F76972DB1887B73800E2C2B4 /* Bar in Resources */ = {isa = PBXBuildFile; fileRef = F769729D1887B73700E2C2B4 /* Bar */; };
+		F76972DC1887B73800E2C2B4 /* BBQJoint in Resources */ = {isa = PBXBuildFile; fileRef = F769729E1887B73700E2C2B4 /* BBQJoint */; };
+		F76972DD1887B73800E2C2B4 /* Bookstore in Resources */ = {isa = PBXBuildFile; fileRef = F769729F1887B73700E2C2B4 /* Bookstore */; };
+		F76972DE1887B73800E2C2B4 /* Bridge in Resources */ = {isa = PBXBuildFile; fileRef = F76972A01887B73700E2C2B4 /* Bridge */; };
+		F76972DF1887B73800E2C2B4 /* Building in Resources */ = {isa = PBXBuildFile; fileRef = F76972A11887B73700E2C2B4 /* Building */; };
+		F76972E01887B73800E2C2B4 /* Café in Resources */ = {isa = PBXBuildFile; fileRef = F76972A21887B73700E2C2B4 /* Café */; };
+		F76972E11887B73800E2C2B4 /* CaribbeanRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972A31887B73700E2C2B4 /* CaribbeanRestaurant */; };
+		F76972E21887B73800E2C2B4 /* ChineseRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972A41887B73700E2C2B4 /* ChineseRestaurant */; };
+		F76972E31887B73800E2C2B4 /* CocktailBar in Resources */ = {isa = PBXBuildFile; fileRef = F76972A51887B73700E2C2B4 /* CocktailBar */; };
+		F76972E41887B73800E2C2B4 /* CoffeeShop in Resources */ = {isa = PBXBuildFile; fileRef = F76972A61887B73700E2C2B4 /* CoffeeShop */; };
+		F76972E51887B73800E2C2B4 /* CommunityCollege in Resources */ = {isa = PBXBuildFile; fileRef = F76972A71887B73700E2C2B4 /* CommunityCollege */; };
+		F76972E61887B73800E2C2B4 /* ConvenienceStore in Resources */ = {isa = PBXBuildFile; fileRef = F76972A81887B73700E2C2B4 /* ConvenienceStore */; };
+		F76972E71887B73800E2C2B4 /* Daycare in Resources */ = {isa = PBXBuildFile; fileRef = F76972A91887B73700E2C2B4 /* Daycare */; };
+		F76972E81887B73800E2C2B4 /* DesignStudio in Resources */ = {isa = PBXBuildFile; fileRef = F76972AA1887B73700E2C2B4 /* DesignStudio */; };
+		F76972E91887B73800E2C2B4 /* DessertShop in Resources */ = {isa = PBXBuildFile; fileRef = F76972AB1887B73700E2C2B4 /* DessertShop */; };
+		F76972EA1887B73800E2C2B4 /* DimSumRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972AC1887B73700E2C2B4 /* DimSumRestaurant */; };
+		F76972EB1887B73800E2C2B4 /* ElectronicsStore in Resources */ = {isa = PBXBuildFile; fileRef = F76972AD1887B73700E2C2B4 /* ElectronicsStore */; };
+		F76972EC1887B73800E2C2B4 /* EventSpace in Resources */ = {isa = PBXBuildFile; fileRef = F76972AE1887B73700E2C2B4 /* EventSpace */; };
+		F76972ED1887B73800E2C2B4 /* Factory in Resources */ = {isa = PBXBuildFile; fileRef = F76972AF1887B73700E2C2B4 /* Factory */; };
+		F76972EE1887B73800E2C2B4 /* FleaMarket in Resources */ = {isa = PBXBuildFile; fileRef = F76972B01887B73700E2C2B4 /* FleaMarket */; };
+		F76972EF1887B73800E2C2B4 /* FoodCourt in Resources */ = {isa = PBXBuildFile; fileRef = F76972B11887B73700E2C2B4 /* FoodCourt */; };
+		F76972F01887B73800E2C2B4 /* FurnitureHomeStore in Resources */ = {isa = PBXBuildFile; fileRef = F76972B21887B73700E2C2B4 /* FurnitureHomeStore */; };
+		F76972F11887B73800E2C2B4 /* GeneralEntertainment in Resources */ = {isa = PBXBuildFile; fileRef = F76972B31887B73700E2C2B4 /* GeneralEntertainment */; };
+		F76972F21887B73800E2C2B4 /* GroceryStore in Resources */ = {isa = PBXBuildFile; fileRef = F76972B41887B73700E2C2B4 /* GroceryStore */; };
+		F76972F31887B73800E2C2B4 /* HobbyShop in Resources */ = {isa = PBXBuildFile; fileRef = F76972B51887B73700E2C2B4 /* HobbyShop */; };
+		F76972F41887B73800E2C2B4 /* Hospital in Resources */ = {isa = PBXBuildFile; fileRef = F76972B61887B73700E2C2B4 /* Hospital */; };
+		F76972F51887B73800E2C2B4 /* Hotel in Resources */ = {isa = PBXBuildFile; fileRef = F76972B71887B73700E2C2B4 /* Hotel */; };
+		F76972F61887B73800E2C2B4 /* IceCreamShop in Resources */ = {isa = PBXBuildFile; fileRef = F76972B81887B73700E2C2B4 /* IceCreamShop */; };
+		F76972F71887B73800E2C2B4 /* ItalianRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972B91887B73700E2C2B4 /* ItalianRestaurant */; };
+		F76972F81887B73800E2C2B4 /* JapaneseRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972BA1887B73700E2C2B4 /* JapaneseRestaurant */; };
+		F76972F91887B73800E2C2B4 /* KaraokeBar in Resources */ = {isa = PBXBuildFile; fileRef = F76972BB1887B73700E2C2B4 /* KaraokeBar */; };
+		F76972FA1887B73800E2C2B4 /* Lounge in Resources */ = {isa = PBXBuildFile; fileRef = F76972BC1887B73700E2C2B4 /* Lounge */; };
+		F76972FB1887B73800E2C2B4 /* MedicalCenter in Resources */ = {isa = PBXBuildFile; fileRef = F76972BD1887B73700E2C2B4 /* MedicalCenter */; };
+		F76972FC1887B73800E2C2B4 /* MexicanRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972BE1887B73700E2C2B4 /* MexicanRestaurant */; };
+		F76972FD1887B73800E2C2B4 /* MovingTarget in Resources */ = {isa = PBXBuildFile; fileRef = F76972BF1887B73700E2C2B4 /* MovingTarget */; };
+		F76972FE1887B73800E2C2B4 /* Nightclub in Resources */ = {isa = PBXBuildFile; fileRef = F76972C01887B73700E2C2B4 /* Nightclub */; };
+		F76972FF1887B73800E2C2B4 /* Office in Resources */ = {isa = PBXBuildFile; fileRef = F76972C11887B73700E2C2B4 /* Office */; };
+		F76973001887B73800E2C2B4 /* PaperOfficeSuppliesStore in Resources */ = {isa = PBXBuildFile; fileRef = F76972C21887B73700E2C2B4 /* PaperOfficeSuppliesStore */; };
+		F76973011887B73800E2C2B4 /* Parking in Resources */ = {isa = PBXBuildFile; fileRef = F76972C31887B73700E2C2B4 /* Parking */; };
+		F76973021887B73800E2C2B4 /* PerformingArtsVenue in Resources */ = {isa = PBXBuildFile; fileRef = F76972C41887B73700E2C2B4 /* PerformingArtsVenue */; };
+		F76973031887B73800E2C2B4 /* PizzaPlace in Resources */ = {isa = PBXBuildFile; fileRef = F76972C51887B73700E2C2B4 /* PizzaPlace */; };
+		F76973041887B73800E2C2B4 /* PoliceStation in Resources */ = {isa = PBXBuildFile; fileRef = F76972C61887B73700E2C2B4 /* PoliceStation */; };
+		F76973051887B73800E2C2B4 /* Professional&OtherPlaces in Resources */ = {isa = PBXBuildFile; fileRef = F76972C71887B73700E2C2B4 /* Professional&OtherPlaces */; };
+		F76973061887B73800E2C2B4 /* RamenNoodleHouse in Resources */ = {isa = PBXBuildFile; fileRef = F76972C81887B73700E2C2B4 /* RamenNoodleHouse */; };
+		F76973071887B73800E2C2B4 /* RecordShop in Resources */ = {isa = PBXBuildFile; fileRef = F76972C91887B73700E2C2B4 /* RecordShop */; };
+		F76973081887B73800E2C2B4 /* ResidentialBuilding(ApartmentCondo) in Resources */ = {isa = PBXBuildFile; fileRef = F76972CA1887B73700E2C2B4 /* ResidentialBuilding(ApartmentCondo) */; };
+		F76973091887B73800E2C2B4 /* Restaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972CB1887B73700E2C2B4 /* Restaurant */; };
+		F769730A1887B73800E2C2B4 /* SalonBarbershop in Resources */ = {isa = PBXBuildFile; fileRef = F76972CC1887B73700E2C2B4 /* SalonBarbershop */; };
+		F769730B1887B73800E2C2B4 /* SeafoodRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972CD1887B73800E2C2B4 /* SeafoodRestaurant */; };
+		F769730C1887B73800E2C2B4 /* SoupPlace in Resources */ = {isa = PBXBuildFile; fileRef = F76972CE1887B73800E2C2B4 /* SoupPlace */; };
+		F769730D1887B73800E2C2B4 /* SpaMassage in Resources */ = {isa = PBXBuildFile; fileRef = F76972CF1887B73800E2C2B4 /* SpaMassage */; };
+		F769730E1887B73800E2C2B4 /* Steakhouse in Resources */ = {isa = PBXBuildFile; fileRef = F76972D01887B73800E2C2B4 /* Steakhouse */; };
+		F769730F1887B73800E2C2B4 /* TaiwaneseRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972D11887B73800E2C2B4 /* TaiwaneseRestaurant */; };
+		F76973101887B73800E2C2B4 /* TeaRoom in Resources */ = {isa = PBXBuildFile; fileRef = F76972D21887B73800E2C2B4 /* TeaRoom */; };
+		F76973111887B73800E2C2B4 /* TechStartup in Resources */ = {isa = PBXBuildFile; fileRef = F76972D31887B73800E2C2B4 /* TechStartup */; };
+		F76973121887B73800E2C2B4 /* ThaiRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972D41887B73800E2C2B4 /* ThaiRestaurant */; };
+		F76973131887B73800E2C2B4 /* University in Resources */ = {isa = PBXBuildFile; fileRef = F76972D51887B73800E2C2B4 /* University */; };
+		F76973141887B73800E2C2B4 /* VietnameseRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972D61887B73800E2C2B4 /* VietnameseRestaurant */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +172,73 @@
 		F72949FB187FF00200E2BFF8 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		F72949FD187FF0B700E2BFF8 /* FSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSService.h; sourceTree = "<group>"; };
 		F72949FE187FF0B700E2BFF8 /* FSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSService.m; sourceTree = "<group>"; };
+		F76972151887873A00E2C2B4 /* VenueMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueMapViewController.h; sourceTree = "<group>"; };
+		F76972161887873A00E2C2B4 /* VenueMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueMapViewController.m; sourceTree = "<group>"; };
+		F76972181887AC6800E2C2B4 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		F76972191887AC6800E2C2B4 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		F769721A1887AC6800E2C2B4 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		F76972991887B73700E2C2B4 /* AmericanRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmericanRestaurant; sourceTree = "<group>"; };
+		F769729A1887B73700E2C2B4 /* AsianRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = AsianRestaurant; sourceTree = "<group>"; };
+		F769729B1887B73700E2C2B4 /* AustralianRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = AustralianRestaurant; sourceTree = "<group>"; };
+		F769729C1887B73700E2C2B4 /* Bank */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bank; sourceTree = "<group>"; };
+		F769729D1887B73700E2C2B4 /* Bar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bar; sourceTree = "<group>"; };
+		F769729E1887B73700E2C2B4 /* BBQJoint */ = {isa = PBXFileReference; lastKnownFileType = file; path = BBQJoint; sourceTree = "<group>"; };
+		F769729F1887B73700E2C2B4 /* Bookstore */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bookstore; sourceTree = "<group>"; };
+		F76972A01887B73700E2C2B4 /* Bridge */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bridge; sourceTree = "<group>"; };
+		F76972A11887B73700E2C2B4 /* Building */ = {isa = PBXFileReference; lastKnownFileType = file; path = Building; sourceTree = "<group>"; };
+		F76972A21887B73700E2C2B4 /* Café */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Café"; sourceTree = "<group>"; };
+		F76972A31887B73700E2C2B4 /* CaribbeanRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaribbeanRestaurant; sourceTree = "<group>"; };
+		F76972A41887B73700E2C2B4 /* ChineseRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChineseRestaurant; sourceTree = "<group>"; };
+		F76972A51887B73700E2C2B4 /* CocktailBar */ = {isa = PBXFileReference; lastKnownFileType = file; path = CocktailBar; sourceTree = "<group>"; };
+		F76972A61887B73700E2C2B4 /* CoffeeShop */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoffeeShop; sourceTree = "<group>"; };
+		F76972A71887B73700E2C2B4 /* CommunityCollege */ = {isa = PBXFileReference; lastKnownFileType = file; path = CommunityCollege; sourceTree = "<group>"; };
+		F76972A81887B73700E2C2B4 /* ConvenienceStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = ConvenienceStore; sourceTree = "<group>"; };
+		F76972A91887B73700E2C2B4 /* Daycare */ = {isa = PBXFileReference; lastKnownFileType = file; path = Daycare; sourceTree = "<group>"; };
+		F76972AA1887B73700E2C2B4 /* DesignStudio */ = {isa = PBXFileReference; lastKnownFileType = file; path = DesignStudio; sourceTree = "<group>"; };
+		F76972AB1887B73700E2C2B4 /* DessertShop */ = {isa = PBXFileReference; lastKnownFileType = file; path = DessertShop; sourceTree = "<group>"; };
+		F76972AC1887B73700E2C2B4 /* DimSumRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = DimSumRestaurant; sourceTree = "<group>"; };
+		F76972AD1887B73700E2C2B4 /* ElectronicsStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = ElectronicsStore; sourceTree = "<group>"; };
+		F76972AE1887B73700E2C2B4 /* EventSpace */ = {isa = PBXFileReference; lastKnownFileType = file; path = EventSpace; sourceTree = "<group>"; };
+		F76972AF1887B73700E2C2B4 /* Factory */ = {isa = PBXFileReference; lastKnownFileType = file; path = Factory; sourceTree = "<group>"; };
+		F76972B01887B73700E2C2B4 /* FleaMarket */ = {isa = PBXFileReference; lastKnownFileType = file; path = FleaMarket; sourceTree = "<group>"; };
+		F76972B11887B73700E2C2B4 /* FoodCourt */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoodCourt; sourceTree = "<group>"; };
+		F76972B21887B73700E2C2B4 /* FurnitureHomeStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = FurnitureHomeStore; sourceTree = "<group>"; };
+		F76972B31887B73700E2C2B4 /* GeneralEntertainment */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeneralEntertainment; sourceTree = "<group>"; };
+		F76972B41887B73700E2C2B4 /* GroceryStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = GroceryStore; sourceTree = "<group>"; };
+		F76972B51887B73700E2C2B4 /* HobbyShop */ = {isa = PBXFileReference; lastKnownFileType = file; path = HobbyShop; sourceTree = "<group>"; };
+		F76972B61887B73700E2C2B4 /* Hospital */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hospital; sourceTree = "<group>"; };
+		F76972B71887B73700E2C2B4 /* Hotel */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hotel; sourceTree = "<group>"; };
+		F76972B81887B73700E2C2B4 /* IceCreamShop */ = {isa = PBXFileReference; lastKnownFileType = file; path = IceCreamShop; sourceTree = "<group>"; };
+		F76972B91887B73700E2C2B4 /* ItalianRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItalianRestaurant; sourceTree = "<group>"; };
+		F76972BA1887B73700E2C2B4 /* JapaneseRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = JapaneseRestaurant; sourceTree = "<group>"; };
+		F76972BB1887B73700E2C2B4 /* KaraokeBar */ = {isa = PBXFileReference; lastKnownFileType = file; path = KaraokeBar; sourceTree = "<group>"; };
+		F76972BC1887B73700E2C2B4 /* Lounge */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lounge; sourceTree = "<group>"; };
+		F76972BD1887B73700E2C2B4 /* MedicalCenter */ = {isa = PBXFileReference; lastKnownFileType = file; path = MedicalCenter; sourceTree = "<group>"; };
+		F76972BE1887B73700E2C2B4 /* MexicanRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = MexicanRestaurant; sourceTree = "<group>"; };
+		F76972BF1887B73700E2C2B4 /* MovingTarget */ = {isa = PBXFileReference; lastKnownFileType = file; path = MovingTarget; sourceTree = "<group>"; };
+		F76972C01887B73700E2C2B4 /* Nightclub */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nightclub; sourceTree = "<group>"; };
+		F76972C11887B73700E2C2B4 /* Office */ = {isa = PBXFileReference; lastKnownFileType = file; path = Office; sourceTree = "<group>"; };
+		F76972C21887B73700E2C2B4 /* PaperOfficeSuppliesStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = PaperOfficeSuppliesStore; sourceTree = "<group>"; };
+		F76972C31887B73700E2C2B4 /* Parking */ = {isa = PBXFileReference; lastKnownFileType = file; path = Parking; sourceTree = "<group>"; };
+		F76972C41887B73700E2C2B4 /* PerformingArtsVenue */ = {isa = PBXFileReference; lastKnownFileType = file; path = PerformingArtsVenue; sourceTree = "<group>"; };
+		F76972C51887B73700E2C2B4 /* PizzaPlace */ = {isa = PBXFileReference; lastKnownFileType = file; path = PizzaPlace; sourceTree = "<group>"; };
+		F76972C61887B73700E2C2B4 /* PoliceStation */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoliceStation; sourceTree = "<group>"; };
+		F76972C71887B73700E2C2B4 /* Professional&OtherPlaces */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Professional&OtherPlaces"; sourceTree = "<group>"; };
+		F76972C81887B73700E2C2B4 /* RamenNoodleHouse */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamenNoodleHouse; sourceTree = "<group>"; };
+		F76972C91887B73700E2C2B4 /* RecordShop */ = {isa = PBXFileReference; lastKnownFileType = file; path = RecordShop; sourceTree = "<group>"; };
+		F76972CA1887B73700E2C2B4 /* ResidentialBuilding(ApartmentCondo) */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ResidentialBuilding(ApartmentCondo)"; sourceTree = "<group>"; };
+		F76972CB1887B73700E2C2B4 /* Restaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = Restaurant; sourceTree = "<group>"; };
+		F76972CC1887B73700E2C2B4 /* SalonBarbershop */ = {isa = PBXFileReference; lastKnownFileType = file; path = SalonBarbershop; sourceTree = "<group>"; };
+		F76972CD1887B73800E2C2B4 /* SeafoodRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = SeafoodRestaurant; sourceTree = "<group>"; };
+		F76972CE1887B73800E2C2B4 /* SoupPlace */ = {isa = PBXFileReference; lastKnownFileType = file; path = SoupPlace; sourceTree = "<group>"; };
+		F76972CF1887B73800E2C2B4 /* SpaMassage */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpaMassage; sourceTree = "<group>"; };
+		F76972D01887B73800E2C2B4 /* Steakhouse */ = {isa = PBXFileReference; lastKnownFileType = file; path = Steakhouse; sourceTree = "<group>"; };
+		F76972D11887B73800E2C2B4 /* TaiwaneseRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = TaiwaneseRestaurant; sourceTree = "<group>"; };
+		F76972D21887B73800E2C2B4 /* TeaRoom */ = {isa = PBXFileReference; lastKnownFileType = file; path = TeaRoom; sourceTree = "<group>"; };
+		F76972D31887B73800E2C2B4 /* TechStartup */ = {isa = PBXFileReference; lastKnownFileType = file; path = TechStartup; sourceTree = "<group>"; };
+		F76972D41887B73800E2C2B4 /* ThaiRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiRestaurant; sourceTree = "<group>"; };
+		F76972D51887B73800E2C2B4 /* University */ = {isa = PBXFileReference; lastKnownFileType = file; path = University; sourceTree = "<group>"; };
+		F76972D61887B73800E2C2B4 /* VietnameseRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = VietnameseRestaurant; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,15 +304,21 @@
 		F7294991187FC97D00E2BFF8 /* FSQProject */ = {
 			isa = PBXGroup;
 			children = (
+				F76972181887AC6800E2C2B4 /* SVProgressHUD.bundle */,
+				F76972191887AC6800E2C2B4 /* SVProgressHUD.h */,
+				F769721A1887AC6800E2C2B4 /* SVProgressHUD.m */,
 				F72949C0187FC9E900E2BFF8 /* Foursquare2 */,
 				F729499A187FC97D00E2BFF8 /* AppDelegate.h */,
 				F729499B187FC97D00E2BFF8 /* AppDelegate.m */,
 				F72949FA187FF00200E2BFF8 /* Data.h */,
 				F72949FB187FF00200E2BFF8 /* Data.m */,
+				F76972981887B73700E2C2B4 /* res_v2 */,
 				F72949F3187FEFD800E2BFF8 /* Tools */,
 				F729499D187FC97D00E2BFF8 /* Main.storyboard */,
 				F72949DE187FCBB300E2BFF8 /* NearbyVenuesViewController.h */,
 				F72949DF187FCBB300E2BFF8 /* NearbyVenuesViewController.m */,
+				F76972151887873A00E2C2B4 /* VenueMapViewController.h */,
+				F76972161887873A00E2C2B4 /* VenueMapViewController.m */,
 				F72949A0187FC97D00E2BFF8 /* ViewController.h */,
 				F72949A1187FC97D00E2BFF8 /* ViewController.m */,
 				F72949A3187FC97D00E2BFF8 /* Images.xcassets */,
@@ -274,6 +412,75 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		F76972981887B73700E2C2B4 /* res_v2 */ = {
+			isa = PBXGroup;
+			children = (
+				F76972991887B73700E2C2B4 /* AmericanRestaurant */,
+				F769729A1887B73700E2C2B4 /* AsianRestaurant */,
+				F769729B1887B73700E2C2B4 /* AustralianRestaurant */,
+				F769729C1887B73700E2C2B4 /* Bank */,
+				F769729D1887B73700E2C2B4 /* Bar */,
+				F769729E1887B73700E2C2B4 /* BBQJoint */,
+				F769729F1887B73700E2C2B4 /* Bookstore */,
+				F76972A01887B73700E2C2B4 /* Bridge */,
+				F76972A11887B73700E2C2B4 /* Building */,
+				F76972A21887B73700E2C2B4 /* Café */,
+				F76972A31887B73700E2C2B4 /* CaribbeanRestaurant */,
+				F76972A41887B73700E2C2B4 /* ChineseRestaurant */,
+				F76972A51887B73700E2C2B4 /* CocktailBar */,
+				F76972A61887B73700E2C2B4 /* CoffeeShop */,
+				F76972A71887B73700E2C2B4 /* CommunityCollege */,
+				F76972A81887B73700E2C2B4 /* ConvenienceStore */,
+				F76972A91887B73700E2C2B4 /* Daycare */,
+				F76972AA1887B73700E2C2B4 /* DesignStudio */,
+				F76972AB1887B73700E2C2B4 /* DessertShop */,
+				F76972AC1887B73700E2C2B4 /* DimSumRestaurant */,
+				F76972AD1887B73700E2C2B4 /* ElectronicsStore */,
+				F76972AE1887B73700E2C2B4 /* EventSpace */,
+				F76972AF1887B73700E2C2B4 /* Factory */,
+				F76972B01887B73700E2C2B4 /* FleaMarket */,
+				F76972B11887B73700E2C2B4 /* FoodCourt */,
+				F76972B21887B73700E2C2B4 /* FurnitureHomeStore */,
+				F76972B31887B73700E2C2B4 /* GeneralEntertainment */,
+				F76972B41887B73700E2C2B4 /* GroceryStore */,
+				F76972B51887B73700E2C2B4 /* HobbyShop */,
+				F76972B61887B73700E2C2B4 /* Hospital */,
+				F76972B71887B73700E2C2B4 /* Hotel */,
+				F76972B81887B73700E2C2B4 /* IceCreamShop */,
+				F76972B91887B73700E2C2B4 /* ItalianRestaurant */,
+				F76972BA1887B73700E2C2B4 /* JapaneseRestaurant */,
+				F76972BB1887B73700E2C2B4 /* KaraokeBar */,
+				F76972BC1887B73700E2C2B4 /* Lounge */,
+				F76972BD1887B73700E2C2B4 /* MedicalCenter */,
+				F76972BE1887B73700E2C2B4 /* MexicanRestaurant */,
+				F76972BF1887B73700E2C2B4 /* MovingTarget */,
+				F76972C01887B73700E2C2B4 /* Nightclub */,
+				F76972C11887B73700E2C2B4 /* Office */,
+				F76972C21887B73700E2C2B4 /* PaperOfficeSuppliesStore */,
+				F76972C31887B73700E2C2B4 /* Parking */,
+				F76972C41887B73700E2C2B4 /* PerformingArtsVenue */,
+				F76972C51887B73700E2C2B4 /* PizzaPlace */,
+				F76972C61887B73700E2C2B4 /* PoliceStation */,
+				F76972C71887B73700E2C2B4 /* Professional&OtherPlaces */,
+				F76972C81887B73700E2C2B4 /* RamenNoodleHouse */,
+				F76972C91887B73700E2C2B4 /* RecordShop */,
+				F76972CA1887B73700E2C2B4 /* ResidentialBuilding(ApartmentCondo) */,
+				F76972CB1887B73700E2C2B4 /* Restaurant */,
+				F76972CC1887B73700E2C2B4 /* SalonBarbershop */,
+				F76972CD1887B73800E2C2B4 /* SeafoodRestaurant */,
+				F76972CE1887B73800E2C2B4 /* SoupPlace */,
+				F76972CF1887B73800E2C2B4 /* SpaMassage */,
+				F76972D01887B73800E2C2B4 /* Steakhouse */,
+				F76972D11887B73800E2C2B4 /* TaiwaneseRestaurant */,
+				F76972D21887B73800E2C2B4 /* TeaRoom */,
+				F76972D31887B73800E2C2B4 /* TechStartup */,
+				F76972D41887B73800E2C2B4 /* ThaiRestaurant */,
+				F76972D51887B73800E2C2B4 /* University */,
+				F76972D61887B73800E2C2B4 /* VietnameseRestaurant */,
+			);
+			path = res_v2;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,15 +557,78 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76972F21887B73800E2C2B4 /* GroceryStore in Resources */,
+				F76973021887B73800E2C2B4 /* PerformingArtsVenue in Resources */,
+				F76972FE1887B73800E2C2B4 /* Nightclub in Resources */,
+				F76973071887B73800E2C2B4 /* RecordShop in Resources */,
+				F76972EE1887B73800E2C2B4 /* FleaMarket in Resources */,
+				F76972DD1887B73800E2C2B4 /* Bookstore in Resources */,
+				F76973101887B73800E2C2B4 /* TeaRoom in Resources */,
+				F76972E01887B73800E2C2B4 /* Café in Resources */,
+				F76973111887B73800E2C2B4 /* TechStartup in Resources */,
+				F76972FA1887B73800E2C2B4 /* Lounge in Resources */,
+				F76972E31887B73800E2C2B4 /* CocktailBar in Resources */,
+				F76972F91887B73800E2C2B4 /* KaraokeBar in Resources */,
+				F76972FF1887B73800E2C2B4 /* Office in Resources */,
 				F72949DB187FC9E900E2BFF8 /* pin@2x.png in Resources */,
+				F76972E91887B73800E2C2B4 /* DessertShop in Resources */,
+				F76973121887B73800E2C2B4 /* ThaiRestaurant in Resources */,
+				F76972F61887B73800E2C2B4 /* IceCreamShop in Resources */,
+				F76972E51887B73800E2C2B4 /* CommunityCollege in Resources */,
+				F76973061887B73800E2C2B4 /* RamenNoodleHouse in Resources */,
+				F769730F1887B73800E2C2B4 /* TaiwaneseRestaurant in Resources */,
+				F76972F71887B73800E2C2B4 /* ItalianRestaurant in Resources */,
+				F76972E21887B73800E2C2B4 /* ChineseRestaurant in Resources */,
+				F76972E71887B73800E2C2B4 /* Daycare in Resources */,
+				F76972DC1887B73800E2C2B4 /* BBQJoint in Resources */,
+				F76972DF1887B73800E2C2B4 /* Building in Resources */,
+				F769730C1887B73800E2C2B4 /* SoupPlace in Resources */,
+				F76973041887B73800E2C2B4 /* PoliceStation in Resources */,
+				F769730D1887B73800E2C2B4 /* SpaMassage in Resources */,
+				F76972E11887B73800E2C2B4 /* CaribbeanRestaurant in Resources */,
 				F72949D9187FC9E900E2BFF8 /* FSWebLogin.xib in Resources */,
+				F76972F31887B73800E2C2B4 /* HobbyShop in Resources */,
+				F76973031887B73800E2C2B4 /* PizzaPlace in Resources */,
 				F72949A4187FC97D00E2BFF8 /* Images.xcassets in Resources */,
+				F76973001887B73800E2C2B4 /* PaperOfficeSuppliesStore in Resources */,
 				F72949DD187FC9E900E2BFF8 /* poweredByFoursquare_gray@2x.png in Resources */,
+				F76972EB1887B73800E2C2B4 /* ElectronicsStore in Resources */,
+				F76972D91887B73800E2C2B4 /* AustralianRestaurant in Resources */,
+				F76972EF1887B73800E2C2B4 /* FoodCourt in Resources */,
+				F76972F81887B73800E2C2B4 /* JapaneseRestaurant in Resources */,
+				F76973091887B73800E2C2B4 /* Restaurant in Resources */,
+				F76973081887B73800E2C2B4 /* ResidentialBuilding(ApartmentCondo) in Resources */,
+				F76972DE1887B73800E2C2B4 /* Bridge in Resources */,
 				F7294996187FC97D00E2BFF8 /* InfoPlist.strings in Resources */,
+				F76973131887B73800E2C2B4 /* University in Resources */,
+				F76973011887B73800E2C2B4 /* Parking in Resources */,
+				F76972F01887B73800E2C2B4 /* FurnitureHomeStore in Resources */,
+				F769721B1887AC6800E2C2B4 /* SVProgressHUD.bundle in Resources */,
 				F72949DA187FC9E900E2BFF8 /* pin.png in Resources */,
+				F76972E81887B73800E2C2B4 /* DesignStudio in Resources */,
+				F76972FD1887B73800E2C2B4 /* MovingTarget in Resources */,
+				F76972FB1887B73800E2C2B4 /* MedicalCenter in Resources */,
+				F76972ED1887B73800E2C2B4 /* Factory in Resources */,
+				F76972DA1887B73800E2C2B4 /* Bank in Resources */,
+				F76972E61887B73800E2C2B4 /* ConvenienceStore in Resources */,
+				F76973141887B73800E2C2B4 /* VietnameseRestaurant in Resources */,
+				F76972EA1887B73800E2C2B4 /* DimSumRestaurant in Resources */,
+				F76973051887B73800E2C2B4 /* Professional&OtherPlaces in Resources */,
+				F76972EC1887B73800E2C2B4 /* EventSpace in Resources */,
+				F76972DB1887B73800E2C2B4 /* Bar in Resources */,
+				F76972D71887B73800E2C2B4 /* AmericanRestaurant in Resources */,
+				F76972D81887B73800E2C2B4 /* AsianRestaurant in Resources */,
+				F76972E41887B73800E2C2B4 /* CoffeeShop in Resources */,
+				F76972F51887B73800E2C2B4 /* Hotel in Resources */,
+				F769730B1887B73800E2C2B4 /* SeafoodRestaurant in Resources */,
+				F769730E1887B73800E2C2B4 /* Steakhouse in Resources */,
 				F729499F187FC97D00E2BFF8 /* Main.storyboard in Resources */,
+				F76972F41887B73800E2C2B4 /* Hospital in Resources */,
 				F72949D3187FC9E900E2BFF8 /* CHANGELOG.md in Resources */,
 				F72949DC187FC9E900E2BFF8 /* poweredByFoursquare_gray.png in Resources */,
+				F76972F11887B73800E2C2B4 /* GeneralEntertainment in Resources */,
+				F769730A1887B73800E2C2B4 /* SalonBarbershop in Resources */,
+				F76972FC1887B73800E2C2B4 /* MexicanRestaurant in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +650,9 @@
 				F72949A2187FC97D00E2BFF8 /* ViewController.m in Sources */,
 				F72949FF187FF0B700E2BFF8 /* FSService.m in Sources */,
 				F72949E6187FCBDF00E2BFF8 /* FSVenue.m in Sources */,
+				F76972171887873A00E2C2B4 /* VenueMapViewController.m in Sources */,
 				F729499C187FC97D00E2BFF8 /* AppDelegate.m in Sources */,
+				F769721C1887AC6800E2C2B4 /* SVProgressHUD.m in Sources */,
 				F72949D5187FC9E900E2BFF8 /* FSOAuth.m in Sources */,
 				F72949F9187FEFD800E2BFF8 /* AutoCoding.m in Sources */,
 				F72949E0187FCBB300E2BFF8 /* NearbyVenuesViewController.m in Sources */,
@@ -600,6 +872,7 @@
 				F72949BC187FC97D00E2BFF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F72949BD187FC97D00E2BFF8 /* Build configuration list for PBXNativeTarget "FSQProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +881,7 @@
 				F72949BF187FC97D00E2BFF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
