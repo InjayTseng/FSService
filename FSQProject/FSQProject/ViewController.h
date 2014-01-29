@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "MWPhotoBrowser.h"
+@interface ViewController : UIViewController <MWPhotoBrowserDelegate>{
+    UISegmentedControl *_segmentedControl;
+    NSMutableArray *_selections;
+    
+}
 
 @end

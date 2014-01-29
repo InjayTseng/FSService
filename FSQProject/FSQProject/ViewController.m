@@ -15,6 +15,8 @@
 #import "AutoCoding+RecursiveParsing.h"
 #import "FSService.h"
 #import "VenueMapViewController.h"
+#import "SVProgressHUD.h"
+
 
 @interface ViewController ()<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -23,6 +25,10 @@
 @property (strong, nonatomic) NSArray *nearbyVenues;
 
 @property (strong, nonatomic) IBOutlet UITableView *tbView;
+
+
+@property (nonatomic, strong) NSMutableArray *photos;
+@property (nonatomic, strong) NSMutableArray *thumbs;
 
 @end
 
@@ -37,11 +43,25 @@
     self.locationManager.delegate = self;
     self.tbView.delegate = self;
     self.tbView.dataSource = self;
-    //[self.locationManager startUpdatingLocation];
+    [self.locationManager startUpdatingLocation];
     //[self updateRightBarButtonStatus];
 	// Do any additional setup after loading the view, typically from a nib.
-    //[self getVenuesForLocation:self.locationManager.location];
+//    [self getVenuesForLocation];
+    [self initRightBarButton];
 }
+
+-(void)initRightBarButton{
+    UIImage* image3 = [UIImage imageNamed:@"reload_blue.png"];
+    CGRect frameimg = CGRectMake(100, 100,30,30);
+    UIButton* someButton = [[UIButton alloc] initWithFrame:frameimg];
+    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+    [someButton addTarget:self action:@selector(getVenuesForLocation)
+              forControlEvents:UIControlEventTouchUpInside];
+    [someButton setShowsTouchWhenHighlighted:YES];
+    UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.rightBarButtonItem=mailbutton;
+}
+
 
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
@@ -61,14 +81,23 @@
     }
 }
 
-//- (void)getVenuesForLocation:(CLLocation *)location {
-//    
-//    [FSService getVenuesForLocation:location andComplete:^(NSArray *venuesArray) {
-//        self.nearbyVenues = venuesArray;
-//        [self showResult];
-//    }];
-//    
-//}
+- (void)getVenuesForLocation{
+    
+    
+    
+    [SVProgressHUD setStatus:@"Searching..."];
+    [FSService getVenuesWithIconForLocation:self.locationManager.location sortEnable:YES andComplete:^(NSArray *venuesArray) {
+
+        [self setNearbyVenues:venuesArray];
+        if (self.nearbyVenues!=nil) {
+//            
+//            [self addVenueAnnotations];
+            [[self tbView] reloadData];
+            [SVProgressHUD dismiss];
+        }
+    }];
+    
+}
 
 -(void)showResult{
  
@@ -149,6 +178,56 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    [SVProgressHUD setStatus:@"Searching..."];
+    FSVenue *venue = self.nearbyVenues[indexPath.row];
+//    [FSService getVenueTips:venue.venueId andComplete:^(NSArray *asdsa) {
+//       
+//    }];
+    [FSService getVenuesPhoto:venue.venueId andComplete:^(NSArray *photoArray, NSArray *thumbnilArray) {
+        
+        NSMutableArray *photos = [[NSMutableArray alloc] init];
+        NSMutableArray *thumbs = [[NSMutableArray alloc] init];
+        
+        for (NSString* url in photoArray){
+            
+            [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:url]]];
+            [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:url]]];
+        }
+        
+        for (NSString* url in thumbnilArray){
+            
+            [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:url]]];
+        }
+        
+        self.photos = photos;
+        self.thumbs = thumbs;
+        // Create browser
+        MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+        browser.displayActionButton = YES;
+        browser.displayNavArrows = YES;
+        browser.displaySelectionButtons = NO;
+        browser.alwaysShowControls = YES;
+//        browser.wantsFullScreenLayout = YES;
+        browser.zoomPhotosToFill = YES;
+        browser.enableGrid = YES;
+        browser.startOnGrid = YES;
+        [browser setCurrentPhotoIndex:0];
+
+        // Show
+        [SVProgressHUD dismiss];
+        if (self.photos.count != 0) {
+            
+            [self.navigationController pushViewController:browser animated:YES];
+        }else{
+        
+            [SVProgressHUD showErrorWithStatus:@"沒有照片"];
+        }
+    }];
+
+}
+
 -(NSString*)saftyFileName:(NSString*)name{
 
     if (name==nil) {
@@ -193,5 +272,53 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+#pragma mark - MWPhotoBrowserDelegate
+
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return _photos.count;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index < _photos.count)
+        return [_photos objectAtIndex:index];
+    return nil;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+    if (index < _thumbs.count)
+        return [_thumbs objectAtIndex:index];
+    return nil;
+}
+
+//- (MWCaptionView *)photoBrowser:(MWPhotoBrowser *)photoBrowser captionViewForPhotoAtIndex:(NSUInteger)index {
+//    MWPhoto *photo = [self.photos objectAtIndex:index];
+//    MWCaptionView *captionView = [[MWCaptionView alloc] initWithPhoto:photo];
+//    return [captionView autorelease];
+//}
+
+//- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser actionButtonPressedForPhotoAtIndex:(NSUInteger)index {
+//    NSLog(@"ACTION!");
+//}
+
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
+    NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
+}
+
+- (BOOL)photoBrowser:(MWPhotoBrowser *)photoBrowser isPhotoSelectedAtIndex:(NSUInteger)index {
+    return [[_selections objectAtIndex:index] boolValue];
+}
+
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
+    [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
+    NSLog(@"Photo at index %lu selected %@", (unsigned long)index, selected ? @"YES" : @"NO");
+}
+
+
+
+
 
 @end

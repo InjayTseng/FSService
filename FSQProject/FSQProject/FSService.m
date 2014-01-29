@@ -17,13 +17,11 @@
         if (venuesArray != nil && venuesArray.count>0) {
             
             [self downloadCategoryIconsIn:venuesArray andComplete:^{
-
                 complete(venuesArray);
             }];
         }else{
             complete(venuesArray);
         }
-
     }];
 }
 
@@ -54,6 +52,51 @@
                                       }
                                   }];
 }
+
+
++(void)getVenuesPhoto:(NSString *)venueID andComplete:(PHOTOBLOCK)complete{
+
+    [Foursquare2 venueGetPhotos:venueID limit:[NSNumber numberWithInt:500] offset:[NSNumber numberWithInt:10] callback:^(BOOL success, id result) {
+        
+        NSDictionary *dic = result;
+        //NSArray* photoArray = [converter convertToPhotos:[[[dic objectForKey:@"response"] objectForKey:@"photos"] objectForKey:@"items"]];
+        NSArray *photo = [[[dic objectForKey:@"response"] objectForKey:@"photos"] objectForKey:@"items"];
+        NSMutableArray* temp = [[NSMutableArray alloc]init];
+        NSMutableArray* temp2 = [[NSMutableArray alloc]init];
+        
+        for (NSDictionary* d in photo){
+        
+            //NSLog(@"%@original%@",[d objectForKey:@"prefix"],[d objectForKey:@"suffix"]);
+            NSString* photoUrl = [NSString stringWithFormat:@"%@original%@",[d objectForKey:@"prefix"],[d objectForKey:@"suffix"]];
+            [temp addObject:photoUrl];
+            
+            NSString* thumbUrl = [NSString stringWithFormat:@"%@100x100%@",[d objectForKey:@"prefix"],[d objectForKey:@"suffix"]];
+            [temp2 addObject:thumbUrl];
+        }
+        
+        NSArray * photosArray = [NSArray arrayWithArray:temp];
+        NSArray * thumbsArray = [NSArray arrayWithArray:temp2];
+        if (complete !=nil) {
+            complete(photosArray,thumbsArray);
+        }
+        
+    }];
+    
+}
+
++(void)getVenueTips:(NSString *)venueID andComplete:(ARRAYBLOCK)complete{
+
+
+    [Foursquare2 venueGetTips:venueID sort:sortPopular limit:[NSNumber numberWithInt:500] offset:[NSNumber numberWithInt:500] callback:^(BOOL success, id result) {
+        
+        
+        NSDictionary *dic = result;
+        //幾乎沒有評論
+        
+    }];
+    
+}
+
 
 +(NSArray*)sortByDistance:(NSArray*)array{
 

@@ -10,4 +10,5 @@
 
 @interface FSConverter : NSObject
 - (NSArray *)convertToObjects:(NSArray *)venues;
+- (NSArray *)convertToPhotos:(NSArray *)photos;
 @end

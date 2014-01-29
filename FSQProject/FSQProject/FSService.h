@@ -14,12 +14,15 @@
 #import "FSConverter.h"
 typedef void(^XBLOCK)();
 typedef void(^ARRAYBLOCK)(NSArray*);
+typedef void(^PHOTOBLOCK)(NSArray* photoArray, NSArray* thumbnilArray);
 
 @interface FSService : NSObject
 
 + (void)getVenuesWithIconForLocation:(CLLocation *)location sortEnable:(BOOL)isSort andComplete:(ARRAYBLOCK)complete;
-
 + (void)getVenuesForLocation:(CLLocation *)location sortEnable:(BOOL)isSort andComplete:(ARRAYBLOCK)complete;
++(void)getVenuesPhoto:(NSString *)venueID andComplete:(PHOTOBLOCK)complete;
++(void)getVenueTips:(NSString *)venueID andComplete:(ARRAYBLOCK)complete;
+
 +(void)downloadCategoryIconsIn:(NSArray*)array andComplete:(XBLOCK)complete;
 
 @end

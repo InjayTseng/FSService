@@ -45,4 +45,14 @@
     return objects;
 }
 
+- (NSArray *)convertToPhotos:(NSArray *)photos{
+    NSMutableArray *objects = [NSMutableArray arrayWithCapacity:photos.count];
+    for (NSDictionary *v  in photos) {
+    
+    
+    }
+    
+    return objects;
+}
+
 @end
