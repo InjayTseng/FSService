@@ -10,6 +10,7 @@
 #import "FSService.h"
 #import "FSVenue.h"
 #import "SVProgressHUD.h"
+#import "VenueDetailViewController.h"
 
 #define DEFAULT_LAT 25.032609
 #define DEFAULT_LON 121.558727
@@ -56,16 +57,21 @@
     self.mapView.delegate = self;
     [self.mapView setRegion:region animated:NO/YES];
     
-    [SVProgressHUD showWithStatus:@"讀取中"];
-    [FSService getVenuesWithIconForLocation:self.targetLocation sortEnable:YES andComplete:^(NSArray *venuesArray) {
-        
-        [self setNearbyVenuesArray:venuesArray];
-        if (self.nearbyVenuesArray!=nil) {
-            
-            [self addVenueAnnotations];
-            [SVProgressHUD dismiss];
-        }
-    }];
+//    [SVProgressHUD showWithStatus:@"讀取中"];
+    
+    [self setNearbyVenuesArray:[[Data sharedInstance] nearbyVenues]];
+    [self.mapView setShowsUserLocation:YES];
+    [self addVenueAnnotations];
+    
+//    [FSService getVenuesWithIconForLocation:self.targetLocation sortEnable:YES andComplete:^(NSArray *venuesArray) {
+//        
+//        [self setNearbyVenuesArray:venuesArray];
+//        if (self.nearbyVenuesArray!=nil) {
+//            
+//            [self addVenueAnnotations];
+//            [SVProgressHUD dismiss];
+//        }
+//    }];
     
     
 //    [FSService getVenuesForLocation:self.targetLocation sortEnable:YES andComplete:^(NSArray *venuesArray) {
@@ -154,6 +160,14 @@
         //[cell.imageView setImage:lastTimeImage];
     }
     
+    
+    UIButton*myButton =[UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    myButton.frame =CGRectMake(0,0,40,40);
+    [myButton addTarget:self action:@selector(annotaionViewClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [myButton setRestorationIdentifier:[annotation title]];
+    annotationView.rightCalloutAccessoryView = myButton;
+    
+    
 //    UILabel * lbNumber = [[UILabel alloc]initWithFrame:CGRectMake(-10,-40, 300, 50)];
 //    [lbNumber setTextAlignment:NSTextAlignmentCenter];
 //    NSString* show  = [annotation title];
@@ -180,6 +194,46 @@
 
 
 }
+
+
+-(void)annotaionViewClicked:(id)sender{
+    
+    UIButton *btn = sender;
+    //    NSLog(@"sender %@",btn.restorationIdentifier);
+    //Site *site = [[DataManager shareInstance] searchSiteByTitle:btn.restorationIdentifier];
+    //[self navigatesToDetailbySite:site];
+    FSVenue *vn = [self getVenueByname:btn.restorationIdentifier];
+    NSLog(@"Go to %@",vn.name);
+    
+    
+    //[self dismissViewControllerAnimated:YES completion:^{
+    //   self.selectBlock(site);
+    //}];
+    
+    VenueDetailViewController *dv = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueDetailViewController"];
+    
+    [dv setCurrentVenue:vn];
+//    [dv setTitleName:site.name];
+//    [dv.lbCanRent setText:site.availBike];
+//    [dv.lbCanPark setText:site.capacity];
+//    [dv setCurrentSite:site];
+//    [dv goLocation:[site.lat doubleValue] andLon:[site.lng doubleValue] withName:site.name];
+    [self.navigationController pushViewController:dv animated:YES];
+
+}
+
+-(FSVenue*)getVenueByname:(NSString*)name{
+
+    for (FSVenue *vn in self.nearbyVenuesArray){
+
+        if ([vn.name isEqualToString:name]) {
+            
+            return vn;
+        }
+    }
+    return nil;
+}
+
 
 //- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 //{
