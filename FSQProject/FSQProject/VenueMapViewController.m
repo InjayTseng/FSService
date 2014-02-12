@@ -44,11 +44,8 @@
     MKPointAnnotation *target = [[MKPointAnnotation alloc] init];
     CLLocationCoordinate2D loc = [self.targetLocation coordinate];
     target.coordinate = loc;
-    target.title = @"Target";
-//    target.subtitle = vs.categories;
-    //        point.subtitle = @"I'm here!!!";
+    target.title = @"站點中心";
     [self.mapView addAnnotation:target];
-    
     
     MKCoordinateRegion region;
     region.center = [self.targetLocation coordinate];
@@ -56,38 +53,10 @@
     region.span.longitudeDelta = 0.001;
     self.mapView.delegate = self;
     [self.mapView setRegion:region animated:NO/YES];
-    
-//    [SVProgressHUD showWithStatus:@"讀取中"];
-    
-    [self setNearbyVenuesArray:[[Data sharedInstance] nearbyVenues]];
+    [self setNearbyVenuesArray:[[FSData sharedInstance] nearbyVenues]];
     [self.mapView setShowsUserLocation:YES];
     [self addVenueAnnotations];
-    
-//    [FSService getVenuesWithIconForLocation:self.targetLocation sortEnable:YES andComplete:^(NSArray *venuesArray) {
-//        
-//        [self setNearbyVenuesArray:venuesArray];
-//        if (self.nearbyVenuesArray!=nil) {
-//            
-//            [self addVenueAnnotations];
-//            [SVProgressHUD dismiss];
-//        }
-//    }];
-    
-    
-//    [FSService getVenuesForLocation:self.targetLocation sortEnable:YES andComplete:^(NSArray *venuesArray) {
-//        [self setNearbyVenuesArray:[NSArray arrayWithArray:venuesArray]];
-//        if (self.nearbyVenuesArray!=nil) {
-//            
-//            [FSService downloadCategoryIconsIn:self.nearbyVenuesArray andComplete:^{
-//                
-//                [SVProgressHUD dismiss];
-//                [self addVenueAnnotations];
-//                
-//            }];
-//        }
-//    }];
-//
-    //[self.mapView setShowsUserLocation:YES];
+
 }
 
 -(void)addVenueAnnotations{

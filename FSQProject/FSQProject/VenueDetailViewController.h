@@ -16,10 +16,14 @@
     NSMutableArray *_selections;
 }
 
+@property (strong, nonatomic) IBOutlet MKMapView *mpView;
 @property FSVenue *currentVenue;
 @property (weak, nonatomic) IBOutlet UILabel *lbCategory;
 @property (weak, nonatomic) IBOutlet UIButton *btnCall;
 @property (weak, nonatomic) IBOutlet UIButton *btnGoToLink;
+@property (strong, nonatomic) IBOutlet UIButton *btnRoute;
+@property (strong, nonatomic) IBOutlet UIButton *btnImage;
+
 - (IBAction)btnRouteToPlace:(id)sender;
 - (IBAction)btnImageShowClicked:(id)sender;
 - (IBAction)btnCallClicked:(id)sender;

@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "FSVenue.h"
 
-@interface Data : NSObject
+@interface FSData : NSObject
 
-+(Data *) sharedInstance;
++(FSData *) sharedInstance;
 
 @property (strong, nonatomic) FSVenue *selected;
 @property (strong, nonatomic) NSArray *nearbyVenues;

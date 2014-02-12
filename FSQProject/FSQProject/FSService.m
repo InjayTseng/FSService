@@ -30,9 +30,9 @@
     [Foursquare2 venueSearchNearByLatitude:@(location.coordinate.latitude)
                                  longitude:@(location.coordinate.longitude)
                                      query:nil
-                                     limit:nil
-                                    intent:intentCheckin
-                                    radius:@(500)
+                                     limit:@(50)
+                                    intent:intentBrowse
+                                    radius:@(1000)
                                 categoryId:nil
                                   callback:^(BOOL success, id result){
                                       if (success) {
@@ -70,7 +70,7 @@
             NSString* photoUrl = [NSString stringWithFormat:@"%@original%@",[d objectForKey:@"prefix"],[d objectForKey:@"suffix"]];
             [temp addObject:photoUrl];
             
-            NSString* thumbUrl = [NSString stringWithFormat:@"%@100x100%@",[d objectForKey:@"prefix"],[d objectForKey:@"suffix"]];
+            NSString* thumbUrl = [NSString stringWithFormat:@"%@50x50%@",[d objectForKey:@"prefix"],[d objectForKey:@"suffix"]];
             [temp2 addObject:thumbUrl];
         }
         

@@ -6,15 +6,18 @@
 //  Copyright (c) 2014 David Tseng. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "VenueDetailViewController.h"
 #import "AutoCoding.h"
 #import "FSVenue.h"
 #import "FSService.h"
 #import "SVProgressHUD.h"
+#import "OfficialWebPageViewController.h"
 @interface VenueDetailViewController ()
 
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) NSMutableArray *thumbs;
+@property (strong, nonatomic) IBOutlet UIImageView *imgView;
 
 @end
 
@@ -32,7 +35,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     if (![[self.currentVenue contact] link]) {
         self.btnGoToLink.alpha = 0.3;
         self.btnGoToLink.enabled = FALSE;
@@ -58,8 +60,54 @@
 //    NSLog(@"%@ %@ ",[[self.currentVenue contact] link],[[self.currentVenue contact] phone]);
     self.navigationItem.title = self.currentVenue.name;
     self.lbCategory.text = self.currentVenue.categories;
-    
+    [self.imgView setFrame:CGRectMake(0, 0, 320, 700)];
+    [self mapSetting];
+    [self buttonDisplay];
 	// Do any additional setup after loading the view.
+}
+
+
+
+-(void)buttonDisplay{
+
+    [self setButtonShadow:self.btnRoute];
+    [self setButtonShadow:self.btnImage];
+    [self setButtonShadow:self.btnCall];
+    [self setButtonShadow:self.btnGoToLink];
+    
+}
+
+
+-(void)setButtonShadow:(UIButton*)btn{
+    
+    btn.layer.cornerRadius = 8.0f;
+    btn.layer.masksToBounds = NO;
+    btn.layer.borderWidth = 0.0f;
+    
+    btn.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    btn.layer.shadowOpacity = 0.8;
+    btn.layer.shadowRadius = 8;
+    btn.layer.shadowOffset = CGSizeMake(8.0f, 8.0f);
+
+
+}
+
+-(void)mapSetting{
+    
+    self.mpView.layer.cornerRadius = 10.0;
+    
+    MKCoordinateRegion newRegion;
+    newRegion.center = self.currentVenue.location.coordinate;
+    newRegion.span.latitudeDelta=0.01;
+    newRegion.span.longitudeDelta=0.01;
+    
+    [self.mpView setRegion:newRegion animated:NO];
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:self.currentVenue.location.coordinate];
+    [annotation setTitle:self.currentVenue.name];
+    [self.mpView removeAnnotations:self.mpView.annotations];
+    [self.mpView addAnnotation:annotation];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +123,8 @@
 }
 
 - (IBAction)btnImageShowClicked:(id)sender {
+    
+    [SVProgressHUD showWithStatus:@"讀取中"];
     
     [FSService getVenuesPhoto:self.currentVenue.venueId andComplete:^(NSArray *photoArray, NSArray *thumbnilArray) {
         
@@ -107,9 +157,10 @@
         [browser setCurrentPhotoIndex:0];
         
         // Show
-        [SVProgressHUD dismiss];
+        
         if (self.photos.count != 0) {
             
+            [SVProgressHUD dismiss];
             [self.navigationController pushViewController:browser animated:YES];
         }else{
             
@@ -121,6 +172,9 @@
 }
 - (IBAction)btnGotoLinkClicked:(id)sender {
     
+    OfficialWebPageViewController* web = [self.storyboard instantiateViewControllerWithIdentifier:@"OfficialWebPageViewController"];
+    [web setUrl:self.currentVenue.contact.link];
+    [self.navigationController pushViewController:web animated:YES];
 
 }
 - (IBAction)btnCallClicked:(id)sender {

@@ -42,7 +42,7 @@
 		F72949EC187FCC2D00E2BFF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72949EB187FCC2D00E2BFF8 /* CoreLocation.framework */; };
 		F72949F8187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949F5187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m */; };
 		F72949F9187FEFD800E2BFF8 /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949F7187FEFD800E2BFF8 /* AutoCoding.m */; };
-		F72949FC187FF00200E2BFF8 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949FB187FF00200E2BFF8 /* Data.m */; };
+		F72949FC187FF00200E2BFF8 /* FSData.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949FB187FF00200E2BFF8 /* FSData.m */; };
 		F72949FF187FF0B700E2BFF8 /* FSService.m in Sources */ = {isa = PBXBuildFile; fileRef = F72949FE187FF0B700E2BFF8 /* FSService.m */; };
 		F76972171887873A00E2C2B4 /* VenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76972161887873A00E2C2B4 /* VenueMapViewController.m */; };
 		F769721B1887AC6800E2C2B4 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F76972181887AC6800E2C2B4 /* SVProgressHUD.bundle */; };
@@ -109,6 +109,8 @@
 		F76973121887B73800E2C2B4 /* ThaiRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972D41887B73800E2C2B4 /* ThaiRestaurant */; };
 		F76973131887B73800E2C2B4 /* University in Resources */ = {isa = PBXBuildFile; fileRef = F76972D51887B73800E2C2B4 /* University */; };
 		F76973141887B73800E2C2B4 /* VietnameseRestaurant in Resources */ = {isa = PBXBuildFile; fileRef = F76972D61887B73800E2C2B4 /* VietnameseRestaurant */; };
+		F7AA8F6618AB7138005BEECB /* blurFoodBg.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AA8F6518AB7138005BEECB /* blurFoodBg.png */; };
+		F7AA8F6A18AB7FEA005BEECB /* OfficialWebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AA8F6918AB7FEA005BEECB /* OfficialWebPageViewController.m */; };
 		F7AE25E8189914B600137D34 /* reload_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AE25E7189914B600137D34 /* reload_blue.png */; };
 		F7AE2648189920DE00137D34 /* MWCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE25ED189920DE00137D34 /* MWCaptionView.m */; };
 		F7AE2649189920DE00137D34 /* MWGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE25F0189920DE00137D34 /* MWGridCell.m */; };
@@ -222,8 +224,8 @@
 		F72949F5187FEFD800E2BFF8 /* AutoCoding+RecursiveParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AutoCoding+RecursiveParsing.m"; sourceTree = "<group>"; };
 		F72949F6187FEFD800E2BFF8 /* AutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCoding.h; sourceTree = "<group>"; };
 		F72949F7187FEFD800E2BFF8 /* AutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCoding.m; sourceTree = "<group>"; };
-		F72949FA187FF00200E2BFF8 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
-		F72949FB187FF00200E2BFF8 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		F72949FA187FF00200E2BFF8 /* FSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSData.h; sourceTree = "<group>"; };
+		F72949FB187FF00200E2BFF8 /* FSData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSData.m; sourceTree = "<group>"; };
 		F72949FD187FF0B700E2BFF8 /* FSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSService.h; sourceTree = "<group>"; };
 		F72949FE187FF0B700E2BFF8 /* FSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSService.m; sourceTree = "<group>"; };
 		F76972151887873A00E2C2B4 /* VenueMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueMapViewController.h; sourceTree = "<group>"; };
@@ -293,6 +295,9 @@
 		F76972D41887B73800E2C2B4 /* ThaiRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiRestaurant; sourceTree = "<group>"; };
 		F76972D51887B73800E2C2B4 /* University */ = {isa = PBXFileReference; lastKnownFileType = file; path = University; sourceTree = "<group>"; };
 		F76972D61887B73800E2C2B4 /* VietnameseRestaurant */ = {isa = PBXFileReference; lastKnownFileType = file; path = VietnameseRestaurant; sourceTree = "<group>"; };
+		F7AA8F6518AB7138005BEECB /* blurFoodBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blurFoodBg.png; sourceTree = "<group>"; };
+		F7AA8F6818AB7FEA005BEECB /* OfficialWebPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficialWebPageViewController.h; sourceTree = "<group>"; };
+		F7AA8F6918AB7FEA005BEECB /* OfficialWebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficialWebPageViewController.m; sourceTree = "<group>"; };
 		F7AE25E7189914B600137D34 /* reload_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_blue.png; sourceTree = "<group>"; };
 		F7AE25EC189920DE00137D34 /* MWCaptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCaptionView.h; sourceTree = "<group>"; };
 		F7AE25ED189920DE00137D34 /* MWCaptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCaptionView.m; sourceTree = "<group>"; };
@@ -451,24 +456,27 @@
 				F72949C0187FC9E900E2BFF8 /* Foursquare2 */,
 				F729499A187FC97D00E2BFF8 /* AppDelegate.h */,
 				F729499B187FC97D00E2BFF8 /* AppDelegate.m */,
-				F72949FA187FF00200E2BFF8 /* Data.h */,
-				F72949FB187FF00200E2BFF8 /* Data.m */,
 				F76972981887B73700E2C2B4 /* res_v2 */,
 				F72949F3187FEFD800E2BFF8 /* Tools */,
 				F729499D187FC97D00E2BFF8 /* Main.storyboard */,
 				617D376A18AA62990096D63C /* DemoViewController.h */,
 				617D376B18AA62990096D63C /* DemoViewController.m */,
+				F72949FD187FF0B700E2BFF8 /* FSService.h */,
+				F72949FE187FF0B700E2BFF8 /* FSService.m */,
+				F72949FA187FF00200E2BFF8 /* FSData.h */,
+				F72949FB187FF00200E2BFF8 /* FSData.m */,
 				F72949A0187FC97D00E2BFF8 /* NearbyVenuesViewController.h */,
 				F72949A1187FC97D00E2BFF8 /* NearbyVenuesViewController.m */,
 				617D376D18AA659A0096D63C /* VenueDetailViewController.h */,
 				617D376E18AA659A0096D63C /* VenueDetailViewController.m */,
 				F76972151887873A00E2C2B4 /* VenueMapViewController.h */,
 				F76972161887873A00E2C2B4 /* VenueMapViewController.m */,
+				F7AA8F6818AB7FEA005BEECB /* OfficialWebPageViewController.h */,
+				F7AA8F6918AB7FEA005BEECB /* OfficialWebPageViewController.m */,
+				F7AA8F6518AB7138005BEECB /* blurFoodBg.png */,
 				F7AE25E7189914B600137D34 /* reload_blue.png */,
 				F72949A3187FC97D00E2BFF8 /* Images.xcassets */,
 				F7294992187FC97D00E2BFF8 /* Supporting Files */,
-				F72949FD187FF0B700E2BFF8 /* FSService.h */,
-				F72949FE187FF0B700E2BFF8 /* FSService.m */,
 			);
 			path = FSQProject;
 			sourceTree = "<group>";
@@ -900,6 +908,7 @@
 				F76972F71887B73800E2C2B4 /* ItalianRestaurant in Resources */,
 				F76972E21887B73800E2C2B4 /* ChineseRestaurant in Resources */,
 				F76972E71887B73800E2C2B4 /* Daycare in Resources */,
+				F7AA8F6618AB7138005BEECB /* blurFoodBg.png in Resources */,
 				F76972DC1887B73800E2C2B4 /* BBQJoint in Resources */,
 				F76972DF1887B73800E2C2B4 /* Building in Resources */,
 				F769730C1887B73800E2C2B4 /* SoupPlace in Resources */,
@@ -1014,9 +1023,10 @@
 				F7AE265A189920DE00137D34 /* PSTCollectionViewLayout.m in Sources */,
 				F72949E5187FCBDF00E2BFF8 /* FSConverter.m in Sources */,
 				F7AE266E189920DF00137D34 /* UIImageView+WebCache.m in Sources */,
-				F72949FC187FF00200E2BFF8 /* Data.m in Sources */,
+				F72949FC187FF00200E2BFF8 /* FSData.m in Sources */,
 				F7AE2648189920DE00137D34 /* MWCaptionView.m in Sources */,
 				F72949D6187FC9E900E2BFF8 /* FSRequester.m in Sources */,
+				F7AA8F6A18AB7FEA005BEECB /* OfficialWebPageViewController.m in Sources */,
 				F7AE2667189920DF00137D34 /* SDWebImageDownloaderOperation.m in Sources */,
 				F7AE264F189920DE00137D34 /* MWZoomingScrollView.m in Sources */,
 				F7AE2656189920DE00137D34 /* PSTCollectionViewController.m in Sources */,

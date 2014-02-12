@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWPhotoBrowser.h"
-@interface NearByVenuesViewController : UIViewController <MWPhotoBrowserDelegate>{
-    UISegmentedControl *_segmentedControl;
-    NSMutableArray *_selections;
-    
-}
+
+@interface NearByVenuesViewController : UIViewController
 
 @property (strong, nonatomic) CLLocation* targetLocation;
 

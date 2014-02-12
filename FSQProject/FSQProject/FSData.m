@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 David Tseng. All rights reserved.
 //
 
-#import "Data.h"
+#import "FSData.h"
 
-@implementation Data
-+(Data *) sharedInstance
+@implementation FSData
++(FSData *) sharedInstance
 {
-    static Data *_sharedClient = nil;
+    static FSData *_sharedClient = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
         _sharedClient = [[self alloc] init];

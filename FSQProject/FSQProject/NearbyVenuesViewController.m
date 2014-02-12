@@ -20,14 +20,9 @@
 
 
 @interface NearByVenuesViewController ()<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
-@property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) FSVenue *selected;
 @property (strong, nonatomic) NSArray *nearbyVenues;
-
 @property (strong, nonatomic) IBOutlet UITableView *tbView;
-
-
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) NSMutableArray *thumbs;
 
@@ -38,20 +33,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Main";
-//    self.locationManager = [[CLLocationManager alloc]init];
-//    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//    self.locationManager.delegate = self;
+    self.title = @"附近景點";
     self.tbView.delegate = self;
     self.tbView.dataSource = self;
-//    [self.locationManager startUpdatingLocation];
-    //[self updateRightBarButtonStatus];
-	// Do any additional setup after loading the view, typically from a nib.
-//    [self getVenuesForLocation];
-    [self initRightBarButton];
+    [self rightButtonCreate];
+    [self getVenuesForLocation];
 }
 
+-(void)rightButtonCreate{
 
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"地圖模式"
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(btnGetSpecificLocationClicked:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+}
 -(void)initRightBarButton{
     
     //UIImage* image3 = [UIImage imageNamed:@"reload_blue.png"];
@@ -63,24 +58,12 @@
     } else {
         
     }
-    //[[UINavigationItem appearance] setTintColor:[UIColor blackColor]];
     [someButton addTarget:self action:@selector(getVenuesForLocation)
          forControlEvents:UIControlEventTouchUpInside];
     [someButton setShowsTouchWhenHighlighted:YES];
     UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
     self.navigationItem.rightBarButtonItem=mailbutton;
 }
-
-
-
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation {
-    [self.locationManager stopUpdatingLocation];
-    
-    //[self setupMapForLocatoion:newLocation];
-}
-
 
 - (void)updateRightBarButtonStatus {
     //self.navigationItem.rightBarButtonItem.enabled = [Foursquare2 isAuthorized];
@@ -93,13 +76,11 @@
 
 - (void)getVenuesForLocation{
     
-    
-    
-    [SVProgressHUD setStatus:@"Searching..."];
+    [SVProgressHUD showWithStatus:@"請稍後"];
     [FSService getVenuesWithIconForLocation:self.targetLocation sortEnable:YES andComplete:^(NSArray *venuesArray) {
 
         [self setNearbyVenues:venuesArray];
-        [[Data sharedInstance] setNearbyVenues:venuesArray];
+        [[FSData sharedInstance] setNearbyVenues:venuesArray];
         if (self.nearbyVenues!=nil) {
 //            
 //            [self addVenueAnnotations];
@@ -122,26 +103,11 @@
 }
 - (IBAction)btnGetSpecificLocationClicked:(id)sender {
     
-    CLLocation* loc = [[CLLocation alloc]initWithLatitude: 25.032609 longitude:121.558727];
-
     VenueMapViewController *vm = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueMapViewController"];
-    [vm setTargetLocation:loc];
+    [vm setTargetLocation:self.targetLocation];
     [self.navigationController pushViewController:vm animated:YES];
 
 }
-
-//-(void)getRestaurantsFrom:(CLLocation*)loc andComplete:(XBLOCK)complete{
-//
-//    [FSService getVenuesForLocation:loc andComplete:^(NSArray *venuesArray) {
-//        self.nearbyVenues = venuesArray;
-//        [[Data sharedInstance] setNearbyVenues:[NSArray arrayWithArray:self.nearbyVenues]];
-//        VenueMapViewController *vm = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueMapViewController"];
-//        [vm setTargetLocation:loc];
-//        [vm setNearbyVenuesArray:[NSArray arrayWithArray:venuesArray]];
-//        [self.navigationController pushViewController:vm animated:YES];
-//    }];
-//    
-//}
 
 #pragma mark - Table
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -183,8 +149,6 @@
         [cell.imageView setImage:lastTimeImage];
     }
 
-
-    
     return cell;
     
 }
@@ -194,59 +158,10 @@
     [SVProgressHUD setStatus:@"Searching..."];
     FSVenue *venue = self.nearbyVenues[indexPath.row];
 
-    
-    
     VenueDetailViewController *vv = [self.storyboard instantiateViewControllerWithIdentifier:@"VenueDetailViewController"];
-
     [vv setCurrentVenue:venue];
-    
     [self.navigationController pushViewController:vv animated:YES];
-    
-    //    [FSService getVenueTips:venue.venueId andComplete:^(NSArray *asdsa) {
-//       
-//    }];
-    
-    
-//    [FSService getVenuesPhoto:venue.venueId andComplete:^(NSArray *photoArray, NSArray *thumbnilArray) {
-//        
-//        NSMutableArray *photos = [[NSMutableArray alloc] init];
-//        NSMutableArray *thumbs = [[NSMutableArray alloc] init];
-//        
-//        for (NSString* url in photoArray){
-//            
-//            [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:url]]];
-//            [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:url]]];
-//        }
-//        
-//        for (NSString* url in thumbnilArray){
-//            
-//            [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:url]]];
-//        }
-//        
-//        self.photos = photos;
-//        self.thumbs = thumbs;
-//        // Create browser
-//        MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-//        browser.displayActionButton = YES;
-//        browser.displayNavArrows = YES;
-//        browser.displaySelectionButtons = NO;
-//        browser.alwaysShowControls = YES;
-////        browser.wantsFullScreenLayout = YES;
-//        browser.zoomPhotosToFill = YES;
-//        browser.enableGrid = YES;
-//        browser.startOnGrid = YES;
-//        [browser setCurrentPhotoIndex:0];
-//
-//        // Show
-//        [SVProgressHUD dismiss];
-//        if (self.photos.count != 0) {
-//            
-//            [self.navigationController pushViewController:browser animated:YES];
-//        }else{
-//        
-//            [SVProgressHUD showErrorWithStatus:@"沒有照片"];
-//        }
-//    }];
+
 
 }
 
@@ -293,50 +208,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-
-
-#pragma mark - MWPhotoBrowserDelegate
-
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
-    return _photos.count;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
-    if (index < _photos.count)
-        return [_photos objectAtIndex:index];
-    return nil;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
-    if (index < _thumbs.count)
-        return [_thumbs objectAtIndex:index];
-    return nil;
-}
-
-//- (MWCaptionView *)photoBrowser:(MWPhotoBrowser *)photoBrowser captionViewForPhotoAtIndex:(NSUInteger)index {
-//    MWPhoto *photo = [self.photos objectAtIndex:index];
-//    MWCaptionView *captionView = [[MWCaptionView alloc] initWithPhoto:photo];
-//    return [captionView autorelease];
-//}
-
-//- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser actionButtonPressedForPhotoAtIndex:(NSUInteger)index {
-//    NSLog(@"ACTION!");
-//}
-
-- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
-    NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
-}
-
-- (BOOL)photoBrowser:(MWPhotoBrowser *)photoBrowser isPhotoSelectedAtIndex:(NSUInteger)index {
-    return [[_selections objectAtIndex:index] boolValue];
-}
-
-- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
-    [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
-    NSLog(@"Photo at index %lu selected %@", (unsigned long)index, selected ? @"YES" : @"NO");
 }
 
 
